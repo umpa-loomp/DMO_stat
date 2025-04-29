@@ -4,10 +4,7 @@ import numpy as np
 from scipy.stats import shapiro, anderson
 from utils.data_handler import get_data, SIGNIFICANCE, continue_or_exit, SHAPIRO_CRITICAL_VALUES
 
-p_05 = SIGNIFICANCE["p_values"]["5%"]
-p_05_idx = SIGNIFICANCE["indices"]["5%"]
-
-# ПЕРЕВІРКА НА НОРМАЛЬНИЙ РОЗПОДІЛ
+# ПЕРЕВІРКА НА НОРМАЛЬНИЙ РОЗПОДІЛ: Критерій Шапіро-Уілка  
 def shapiro_stat():
     """
     Перевірка даних на нормальність розподілу за критерієм Шапіро-Уілка.

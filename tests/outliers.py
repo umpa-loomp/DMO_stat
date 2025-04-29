@@ -10,26 +10,18 @@ def outliers_stat():
             if n_d < 4 or n_d > 10:
                 print("Введіть більше ніж три та менш ніж десять значень!")
                 continue
-                
-            # Мінімальне значення
+             
             min_d = min(data)
-
-            # Максимальне значення
             max_d = max(data)
-
-            # Середнє арифметичне значення
             mean_d3 = sum(data) / n_d
 
-            # Стандартне відхилення - ФОРМУЛА
-            st_d4 = (sum((i - mean_d3)**2 for i in data) / (n_d - 1))**0.5
+            st_d4 = (sum((i - mean_d3)**2 for i in data) / (n_d - 1))**0.5 # Стандартне відхилення
 
             p_05 = SIGNIFICANCE["p_values"]["5%"]
             p_01 = SIGNIFICANCE["p_values"]["1%"]
             
-            # Шовене для мінімального значення
+            # Шовене
             sh_min = (mean_d3 - min_d) / st_d4
-
-            # Шовене для максимального значення
             sh_max = (max_d - mean_d3) / st_d4
 
             # Критичні значення Шовене
@@ -45,10 +37,9 @@ def outliers_stat():
 
             sh_crit = sh_crits[n_d]
 
-            # Діксон для мінімального значення
+            # Діксон
             d_min = (sort_d[1] - min_d) / (max_d - min_d)
-
-            # Діксон для максимального значення
+            # Діксон
             d_max = (max_d - sort_d[-2]) / (max_d - min_d)
 
             # Критичні значення Діксона
@@ -64,10 +55,9 @@ def outliers_stat():
 
             d_crit = d_crits[n_d][1]
             
-            # Романовський для мінімального значення
-            rom_min = abs(min_d - mean_d3) / st_d4
-            
-            # Романовський для максимального значення
+            # Романовський
+            rom_min = abs(min_d - mean_d3) / st_d4            
+            # Романовський
             rom_max = abs(max_d - mean_d3) / st_d4
             
             # Критичні значення Романовського при α = 0.05

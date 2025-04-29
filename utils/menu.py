@@ -76,8 +76,8 @@ def main_menu():
             normality_submenu()
 
         elif input_d == "4":
-            print("\nФункціональність у розробці\n")
-            input("Натисніть Enter для продовження...")
+            from tests.student_welch_test import student_welch_test
+            student_welch_test()
             
         elif input_d == "5":
             print("\nФункціональність у розробці\n")
