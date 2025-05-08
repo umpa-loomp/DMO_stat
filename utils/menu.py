@@ -143,8 +143,8 @@ def main_menu():
             input("Натисніть Enter для продовження...")
             
         elif input_d == "7":
-            print("\nФункціональність у розробці\n")
-            input("Натисніть Enter для продовження...")
+            from tests.dunn_test import dunn_test
+            dunn_test()
             
         elif input_d == "8":
             print("\nФункціональність у розробці\n")
