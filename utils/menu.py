@@ -147,8 +147,8 @@ def main_menu():
             dunn_test()
             
         elif input_d == "8":
-            print("\nФункціональність у розробці\n")
-            input("Натисніть Enter для продовження...")
+            from tests.correlation import pearson_correlation
+            pearson_correlation()
             
         elif input_d == "9":
             print("\nФункціональність у розробці\n")

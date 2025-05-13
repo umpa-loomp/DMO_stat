@@ -1,4 +1,33 @@
-.vscode
-__pycache__
-*.pyc
+# Byte-compiled / optimized / DLL files
+__pycache__/
 *.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.spec
+
+# PyInstaller
+*.manifest
+*.spec
+build/
+dist/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Other temporary files
+.DS_Store
+Thumbs.db
