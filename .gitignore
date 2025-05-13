@@ -31,3 +31,8 @@ ENV/
 # Other temporary files
 .DS_Store
 Thumbs.db
+
+# PyInstaller build files
+build/
+dist/
+*.spec
